@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string>
-#include "ToyFactory.cpp"
+#include "RecetaFactory.cpp"
 using namespace std;
-//client
 
 int main()
 {
@@ -13,9 +12,9 @@ int main()
 		if (!type) {
 			break;
 		}
-		Toy *v = ToyFactory::createToy(type);
+		Receta *v = RecetaFactory::createReceta(type);
 		if (v) {
-			v->showProduct();
+			v->Presentar();
 			delete v;
 		}
 	}
